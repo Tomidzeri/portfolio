@@ -12,17 +12,18 @@
     });
   });
 */
+/* 
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent page refresh
 
   // Send the form data via EmailJS
   emailjs.sendForm('service_n4j8iqy', 'template_gr5ievp', this)
-      .then(function() {
-          alert('Message Sent!');
-      }, function(error) {
-          alert('Failed to send message: ' + JSON.stringify(error));
-      });
-});
+    .then(function() {
+      alert('Message Sent!');
+    }, function(error) {
+      alert('Failed to send message: ' + JSON.stringify(error));
+    });
+}); */
 
 function SendMail() {
   var params = {
