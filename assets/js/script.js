@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+/* document.addEventListener('DOMContentLoaded', function () {
     // Get the form element and the submit button
     var form = document.querySelector('.work-request');
     var submitButton = form.querySelector('input[type="submit"]');
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('Currently in development...');
     });
   });
-
+*/
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent page refresh
 
