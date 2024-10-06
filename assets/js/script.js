@@ -11,4 +11,15 @@ document.addEventListener('DOMContentLoaded', function () {
       alert('Currently in development...');
     });
   });
-  
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault(); // Prevent page refresh
+
+  // Send the form data via EmailJS
+  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+      .then(function() {
+          alert('Message Sent!');
+      }, function(error) {
+          alert('Failed to send message: ' + JSON.stringify(error));
+      });
+});
