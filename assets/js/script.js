@@ -23,7 +23,12 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     }, function(error) {
       alert('Failed to send message: ' + JSON.stringify(error));
     });
-}); */
+}); 
+var messageInput = document.getElementById("message");\
+messageInput.addEventListener("input", function() {
+  console.log("User is typing: ", messageInput.value);
+  // You can perform other actions here, such as validation or saving the state
+});
 
 function SendMail() {
   var params = {
@@ -34,4 +39,27 @@ function SendMail() {
   emailjs.send('service_n4j8iqy', 'template_gr5ievp', params).then(function (res){
     alert("Success! " +res.status);
   })
+} */
+
+function SendMail() {
+  var params = {
+    from_name: document.getElementById("fullName").value,
+    email_id: document.getElementById("email_id").value,
+    message: document.getElementById("message").value
+  };
+
+  emailjs.send('service_n4j8iqy', 'template_gr5ievp', params)
+    .then(function(res) {
+      alert("Success! Message sent with status: " + res.status);
+    })
+    .catch(function(error) {
+      alert("Failed to send message: " + JSON.stringify(error));
+    });
 }
+
+// Event listener for typing in the message field
+var messageInput = document.getElementById("message");
+messageInput.addEventListener("input", function() {
+  console.log("User is typing: ", messageInput.value);
+  // Additional logic can go here
+});
