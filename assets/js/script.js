@@ -12,7 +12,7 @@
     });
   });
 */
-/* 
+
 document.getElementById('contact-form').addEventListener('submit', function(event) {
   event.preventDefault(); // Prevent page refresh
 
@@ -23,8 +23,8 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     }, function(error) {
       alert('Failed to send message: ' + JSON.stringify(error));
     });
-}); */
-
+}); 
+/* 
 function SendMail() {
   var params = {
     from_name : document.getElementById("fullName").value,
@@ -34,4 +34,4 @@ function SendMail() {
   emailjs.send('service_n4j8iqy', 'template_gr5ievp', params).then(function (res){
     alert("Success! " +res.status);
   })
-}
+}*/

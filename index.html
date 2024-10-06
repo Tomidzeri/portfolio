@@ -208,21 +208,23 @@
                     </label>
                   </span>
                 </div>
-                <div class="work-request--information">
+                <form id="contact-form" class="work-request">
+                  <div class="work-request--information">
                     <div class="information-name">
-                      <input id="fullName" name="name" type="text" spellcheck="false" required>
-                      <label for="name">Name</label>
+                      <input id="from_name" name="from_name" type="text" spellcheck="false" required>
+                      <label for="from_name">Name</label>
                     </div>
                     <div class="information-email">
-                      <input id="email_id" name="email" type="email" spellcheck="false" required>
+                      <input id="email_id" name="email_id" type="email" spellcheck="false" required>
                       <label for="email_id">Email</label>
                     </div>
                     <div class="information-message">
                       <textarea id="message" name="message" spellcheck="false" placeholder="Your Message" required></textarea>
                       <label for="message">Message</label>
                     </div>
-                    <input onclick="SendMail()" type="submit" value="Send Request">
-                </div>
+                    <input type="submit" value="Send Request">
+                  </div>
+                </form>
               </form>
             </div>
           </li>
