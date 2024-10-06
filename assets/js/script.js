@@ -48,18 +48,15 @@ function SendMail() {
     message: document.getElementById("message").value
   };
 
+  console.log("Sending email with params:", params); // Debug log
+
   emailjs.send('service_n4j8iqy', 'template_gr5ievp', params)
     .then(function(res) {
       alert("Success! Message sent with status: " + res.status);
+      console.log(res); // Debug log for response
     })
     .catch(function(error) {
       alert("Failed to send message: " + JSON.stringify(error));
+      console.error("Error details:", error); // Debug log for error
     });
 }
-
-// Event listener for typing in the message field
-var messageInput = document.getElementById("message");
-messageInput.addEventListener("input", function() {
-  console.log("User is typing: ", messageInput.value);
-  // Additional logic can go here
-});

@@ -171,7 +171,7 @@
             <div class="hire">
               <h2>You want me to do?</h2>
               <!-- checkout formspree.io for easy form setup -->
-              <form class="work-request">
+              <form class="work-request" id="contact-form" onsubmit="SendMail(); return false;">
                 <div class="work-request--options">
                   <span class="options-a">
                     <input id="opt-1" type="checkbox" value="app design">
@@ -208,23 +208,21 @@
                     </label>
                   </span>
                 </div>
-                <form id="contact-form" onsubmit="SendMail(); return false;">
-                  <div class="work-request--information">
-                    <div class="information-name">
-                      <input id="fullName" name="from_name" type="text" spellcheck="false" required>
-                      <label for="fullName">Name</label>
-                    </div>
-                    <div class="information-email">
-                      <input id="email_id" name="email_id" type="email" spellcheck="false" required>
-                      <label for="email_id">Email</label>
-                    </div>
-                    <div class="information-message">
-                      <textarea id="message" name="message" spellcheck="false" placeholder="Your Message" required></textarea>
-                      <label for="message">Message</label>
-                    </div>
-                    <button type="submit">Send Request</button>
+                <div class="work-request--information">
+                  <div class="information-name">
+                    <input id="fullName" name="from_name" type="text" spellcheck="false" required>
+                    <label for="fullName">Name</label>
                   </div>
-                </form>
+                  <div class="information-email">
+                    <input id="email_id" name="email_id" type="email" spellcheck="false" required>
+                    <label for="email_id">Email</label>
+                  </div>
+                  <div class="information-message">
+                    <textarea id="message" name="message" spellcheck="false" placeholder="Your Message" required></textarea>
+                    <label for="message">Message</label>
+                  </div>
+                  <button type="submit">Send Request</button>
+                </div>
               </form>
             </div>
           </li>
