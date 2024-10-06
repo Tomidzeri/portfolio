@@ -16,7 +16,7 @@ document.getElementById('contact-form').addEventListener('submit', function(even
   event.preventDefault(); // Prevent page refresh
 
   // Send the form data via EmailJS
-  emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+  emailjs.sendForm('service_n4j8iqy', 'template_gr5ievp', this)
       .then(function() {
           alert('Message Sent!');
       }, function(error) {
