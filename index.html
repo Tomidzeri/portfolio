@@ -209,9 +209,8 @@
                   </span>
                 </div>
                 <div class="work-request--information">
-                  
                     <div class="information-name">
-                      <input id="from_name" name="name" type="text" spellcheck="false" required>
+                      <input id="fullName" name="name" type="text" spellcheck="false" required>
                       <label for="name">Name</label>
                     </div>
                     <div class="information-email">
@@ -222,8 +221,7 @@
                       <textarea id="message" name="message" spellcheck="false" placeholder="Your Message" required></textarea>
                       <label for="message">Message</label>
                     </div>
-                    <input type="submit" value="Send Request">
-                  
+                    <input onclick="SendMail()" type="submit" value="Send Request">
                 </div>
               </form>
             </div>

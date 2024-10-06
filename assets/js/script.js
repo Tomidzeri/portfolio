@@ -23,3 +23,14 @@ document.getElementById('contact-form').addEventListener('submit', function(even
           alert('Failed to send message: ' + JSON.stringify(error));
       });
 });
+
+function SendMail() {
+  var params = {
+    from_name : document.getElementById("fullName").value,
+    email_id : document.getElementById("email_id").value,
+    message : document.getElementById("message").value
+  }
+  emailjs.send('service_n4j8iqy', 'template_gr5ievp', params).then(function (res){
+    alert("Success! " +res.status);
+  })
+}
