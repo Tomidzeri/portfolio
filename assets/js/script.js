@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Send email using EmailJS
-    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+    emailjs.send('service_n4j8iqy', 'template_gr5ievp', {
       user_name: name,
       user_email: email,
       user_message: message
