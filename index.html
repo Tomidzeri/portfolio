@@ -11,11 +11,15 @@
   <link rel="stylesheet" href="assets/css/main.css">
 </head>
 
-<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
 <script type="text/javascript">
-  (function(){
-    emailjs.init("52VYnLK1hmwgBUY20");
-  })();
+   (function(){
+      emailjs.init({
+        publicKey: "52VYnLK1hmwgBUY20",
+      });
+   })();
 </script>
 
 <body>
