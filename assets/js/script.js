@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault(); // Prevent the form from submitting
 
     // Get form values
-    var name = document.getElementById('name').value;
-    var email = document.getElementById('email').value;
+    var name = document.getElementById('fullName').value;
+    var email = document.getElementById('email_id').value;
 
     // Validate form values
     if (!name || !email) {
