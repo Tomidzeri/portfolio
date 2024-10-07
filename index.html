@@ -391,5 +391,20 @@
     </script>
     <script src="assets/js/functions-min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const inputs = document.querySelectorAll('.work-request--information input, .work-request--information textarea');
+    
+        inputs.forEach(input => {
+          input.addEventListener('input', function () {
+            if (this.value) {
+              this.classList.add('has-value');
+            } else {
+              this.classList.remove('has-value');
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
