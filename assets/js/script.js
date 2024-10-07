@@ -8,19 +8,21 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault(); // Prevent the form from submitting
 
     // Get form values
-    var name = document.getElementById('fullName').value;
-    var email = document.getElementById('email_id').value;
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var message = document.getElementById('message').value;
 
     // Validate form values
-    if (!name || !email) {
+    if (!name || !email || !message) {
       alert('Please fill in all fields.');
       return;
     }
 
     // Send email using EmailJS
-    emailjs.send('service_n4j8iqy', 'template_gr5ievp', {
+    emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
       user_name: name,
-      user_email: email
+      user_email: email,
+      user_message: message
     })
     .then(function(response) {
       console.log('SUCCESS!', response.status, response.text);
