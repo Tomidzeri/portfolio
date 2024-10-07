@@ -7,7 +7,27 @@ document.addEventListener('DOMContentLoaded', function () {
   submitButton.addEventListener('click', function (e) {
     e.preventDefault(); // Prevent the form from submitting
 
-    // Show a pop-up message
-    alert('Currently in development...');
+    // Get form values
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+
+    // Validate form values
+    if (!name || !email) {
+      alert('Please fill in all fields.');
+      return;
+    }
+
+    // Send email using EmailJS
+    emailjs.send('service_n4j8iqy', 'template_gr5ievp', {
+      user_name: name,
+      user_email: email
+    })
+    .then(function(response) {
+      console.log('SUCCESS!', response.status, response.text);
+      alert('Email sent successfully!');
+    }, function(error) {
+      console.log('FAILED...', error);
+      alert('Failed to send email. Please try again later.');
+    });
   });
 });
