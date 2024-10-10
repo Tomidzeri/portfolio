@@ -34,6 +34,10 @@ document.addEventListener('DOMContentLoaded', function () {
       return;
     }
 
+    // Disable the submit button to prevent multiple submissions
+    submitButton.disabled = true;
+    submitButton.value = 'Sending...';
+
     // Send email using EmailJS
     emailjs.send('service_n4j8iqy', 'template_gr5ievp', {
       user_name: name,
@@ -43,10 +47,22 @@ document.addEventListener('DOMContentLoaded', function () {
     .then(function(response) {
       console.log('SUCCESS!', response.status, response.text);
       alert('Email sent successfully!');
+
+      // Reset form fields after success
+      nameInput.value = '';
+      emailInput.value = '';
+      messageInput.value = '';
+
+      // Re-enable the submit button
+      submitButton.disabled = false;
+      submitButton.value = 'Send Request';
     }, function(error) {
       console.log('FAILED...', error);
       alert('Failed to send email. Please try again later.');
+
+      // Re-enable the submit button even if there's an error
+      submitButton.disabled = false;
+      submitButton.value = 'Send Request';
     });
   });
 });
-
